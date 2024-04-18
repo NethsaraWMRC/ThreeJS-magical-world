@@ -157,3 +157,14 @@ canvas {
   top: 100px;
   animation: textAnimation 2s ease forwards;
 }
+#Character-sub-text {
+  font-size: 26px;
+  text-align: left;
+  padding: 0 200px;
+}
+@media only screen and (max-width: 768px) {
+  #Character-sub-text {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+}
