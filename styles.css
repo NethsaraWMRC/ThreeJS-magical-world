@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  overflow: hidden; /* Disable scrolling */
+
+  height: 100vh;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#play-button {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 20px 40px;
+  border: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+}
+
+#play-button:hover {
+  opacity: 0.9;
+}
+
+#play-button:active {
+  opacity: 0.6;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  75% {
+    transform: scale(100);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+#magical-text {
+  display: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 64px;
+  color: white;
+  text-align: center;
+  animation: fadeIn 5.5s ease forwards;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: black;
+  background-image: url("download3.jpeg"); /* Add background image */
+  background-size: 100% 140%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.items-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+#object {
+  width: auto;
+  height: auto;
+  background: transparent;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+  cursor: pointer;
+}
+
+#bottom-nav {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  width: 100%;
+  height: 250px;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns {
+  background-color: transparent;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 100px;
+  border-width: 3px;
+  border-color: white;
+  color: white;
+  height: 60px;
+  width: 60px;
+  transition: all 0.15s ease;
+}
+
+.btns:hover {
+  opacity: 0.9;
+}
+
+.btns:active {
+  opacity: 0.6;
+}
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#text {
+  display: block;
+
+  text-align: center;
+  font-size: 64px;
+  color: white;
+  position: relative;
+  top: 100px;
+  animation: textAnimation 2s ease forwards;
+}
